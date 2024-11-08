@@ -22,7 +22,7 @@ namespace WpfApp1_final_MasterMind
     public partial class MainWindow : Window
     {
         Random rnd = new Random();
-        
+
 
         string kleur1, kleur2, kleur3, kleur4;
 
@@ -38,11 +38,11 @@ namespace WpfApp1_final_MasterMind
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            
+
             kleur1 = ChooseColor(rnd.Next(0, 6));
             kleur2 = ChooseColor(rnd.Next(0, 6));
             kleur3 = ChooseColor(rnd.Next(0, 6));
-            kleur4= ChooseColor(rnd.Next(0, 6));
+            kleur4 = ChooseColor(rnd.Next(0, 6));
 
             this.Title = $"MasterMind: {kleur1}, {kleur2}, {kleur3}, {kleur4}";
 
@@ -81,8 +81,91 @@ namespace WpfApp1_final_MasterMind
             }
         }
 
+        private void colorChange(object sender, EventArgs e)
+        {
+
+            ComboBox changedcombobox = sender as ComboBox;
+
+            if (changedcombobox == comboBoxKl1)
+            {
+                label1.Background = GetColorFromIndex(changedcombobox.SelectedIndex);
+            }
+            else if (changedcombobox == comboBoxKl2)
+            {
+                label2.Background = GetColorFromIndex(changedcombobox.SelectedIndex);
+            }
+            else if (changedcombobox == comboBoxKl3)
+            {
+                label3.Background = GetColorFromIndex(changedcombobox.SelectedIndex);
+            }
+            else if (changedcombobox == comboBoxKl4)
+            {
+                label4.Background = GetColorFromIndex(changedcombobox.SelectedIndex);
+            }
 
 
 
+        }
+
+
+
+        private void comboBoxKl1_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            colorChange(sender, e);
+        }
+
+        private void comboBoxKl2_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            colorChange(sender, e);
+
+        }
+
+        private void comboBoxKl3_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            colorChange(sender, e);
+
+        }
+
+        private void comboBoxKl4_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            colorChange(sender, e);
+
+        }
+
+        private Brush GetColorFromIndex(int selectedIndex)
+        {
+
+            switch (selectedIndex)
+            {
+                case 0:
+
+                    return Brushes.Red;
+
+                case 1:
+
+                    return Brushes.White;
+
+                case 2:
+                    return Brushes.Yellow;
+
+                case 3:
+                    return Brushes.Orange;
+
+                case 4:
+                    return Brushes.Green;
+
+                case 5:
+                    return Brushes.Blue;
+
+                default:
+                    return Brushes.Black;
+
+
+
+
+            }
+
+
+        }
     }
 }

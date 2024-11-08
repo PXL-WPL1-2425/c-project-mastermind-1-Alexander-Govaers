@@ -38,7 +38,7 @@ namespace WpfApp1_final_MasterMind
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            string voornaam = "alexander";
+            
             kleur1 = ChooseColor(rnd.Next(0, 6));
             kleur2 = ChooseColor(rnd.Next(0, 6));
             kleur3 = ChooseColor(rnd.Next(0, 6));
@@ -46,35 +46,32 @@ namespace WpfApp1_final_MasterMind
 
             this.Title = $"MasterMind: {kleur1}, {kleur2}, {kleur3}, {kleur4}";
 
-            this.Title = Hi(voornaam);
-
-
 
         }
 
-        private string ChooseColor(int colorChange)
+        private string ChooseColor(int willekeurigNummer)
         {
-            if (colorChange == 0)
+            if (willekeurigNummer == 0)
             {
                 return "Rood";
             }
-            else if (colorChange == 1)
+            else if (willekeurigNummer == 1)
             {
                 return "Geel";
             }
-            else if (colorChange == 2)
+            else if (willekeurigNummer == 2)
             {
                 return "Oranje";
             }
-            else if (colorChange == 3)
+            else if (willekeurigNummer == 3)
             {
                 return "Wit";
             }
-            else if (colorChange == 4)
+            else if (willekeurigNummer == 4)
             {
                 return "Groen";
             }
-            else if (colorChange == 5)
+            else if (willekeurigNummer == 5)
             {
                 return "Blauw";
             }
@@ -84,11 +81,7 @@ namespace WpfApp1_final_MasterMind
             }
         }
 
-        private string Hi(string naam)
-        {
-            return $"Goedendag {naam}";
 
-        }
 
 
     }

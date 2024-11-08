@@ -23,17 +23,37 @@
 
         </Grid.RowDefinitions>
         <ComboBox Grid.Column="0" Grid.Row="0" x:Name="comboBoxKl1"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
-
+            <ComboBoxItem Background="#FFD90808" Content="Rood"/>
+            <ComboBoxItem Background="White" Content="Wit"/>
+            <ComboBoxItem Background="Yellow" Content="Geel"/>
+            <ComboBoxItem Background="Orange" Content="Oranje"/>
+            <ComboBoxItem Background="Green" Content="Groen"/>
+            <ComboBoxItem Background="Blue" Content="Blauw"/>
         </ComboBox>
         <ComboBox x:Name="comboBoxKl2" Grid.Row="0" Grid.Column="1"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
-
+            <ComboBoxItem Background="#FFD90808" Content="Rood"/>
+            <ComboBoxItem Background="White" Content="Wit"/>
+            <ComboBoxItem Background="Yellow" Content="Geel"/>
+            <ComboBoxItem Background="Orange" Content="Oranje"/>
+            <ComboBoxItem Background="Green" Content="Groen"/>
+            <ComboBoxItem Background="Blue" Content="Blauw"/>
         </ComboBox>
 
         <ComboBox x:Name="comboBoxKl3" Grid.Row="0" Grid.Column="2"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
-
+            <ComboBoxItem Background="#FFD90808" Content="Rood"/>
+            <ComboBoxItem Background="White" Content="Wit"/>
+            <ComboBoxItem Background="Yellow" Content="Geel"/>
+            <ComboBoxItem Background="Orange" Content="Oranje"/>
+            <ComboBoxItem Background="Green" Content="Groen"/>
+            <ComboBoxItem Background="Blue" Content="Blauw"/>
         </ComboBox>
         <ComboBox x:Name="comboBoxKl4" Grid.Row="0" Grid.Column="3"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
-
+            <ComboBoxItem Background="#FFD90808" Content="Rood"/>
+            <ComboBoxItem Background="White" Content="Wit"/>
+            <ComboBoxItem Background="Yellow" Content="Geel"/>
+            <ComboBoxItem Background="Orange" Content="Oranje"/>
+            <ComboBoxItem Background="Green" Content="Groen"/>
+            <ComboBoxItem Background="Blue" Content="Blauw"/>
         </ComboBox>
 
         <Button x:Name="checkButton" Content="Check Code"  Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2"/>

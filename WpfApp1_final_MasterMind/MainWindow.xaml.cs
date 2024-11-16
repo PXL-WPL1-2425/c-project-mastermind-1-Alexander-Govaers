@@ -1,6 +1,7 @@
 ﻿using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -120,6 +121,7 @@ namespace WpfApp1_final_MasterMind
 
         }
 
+
         private void comboBoxKl3_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             colorChange(sender, e);
@@ -163,6 +165,60 @@ namespace WpfApp1_final_MasterMind
 
 
 
+            }
+        }
+        private void checkButton_Click(object sender, RoutedEventArgs e)
+        {
+
+            LabelChanged(label1, this.Title, 0, comboBoxKl1);
+            LabelChanged(label2, this.Title, 1, comboBoxKl2);
+            LabelChanged(label3, this.Title, 2, comboBoxKl3);
+            LabelChanged(label4, this.Title, 3, comboBoxKl4);
+
+
+
+        }
+        private void LabelChanged(Label kleurLabel, string titel, int positie, ComboBox input)
+        {
+            string oplossing;
+
+            switch (positie)
+            {
+                case 0:
+                    oplossing = kleur1;
+                    break;
+
+                case 1:
+                    oplossing = kleur2;
+                    break;
+
+                case 2:
+                    oplossing = kleur3;
+                    break;
+                case 3:
+                    oplossing = kleur4;
+                    break;
+                default:
+                    oplossing = "error";
+                    break;
+
+            }
+
+            if (titel.Contains(input.Text) && input.Text != "")
+            {
+                kleurLabel.BorderBrush = Brushes.Wheat;
+
+                if (input.Text == oplossing)
+                {
+                    kleurLabel.BorderBrush = Brushes.DarkRed;
+                }
+
+                kleurLabel.BorderThickness = new Thickness(4);
+
+            }
+            else
+            {
+                kleurLabel.BorderThickness = new Thickness(0);
             }
 
 
